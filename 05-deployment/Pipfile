@@ -8,7 +8,8 @@ numpy = "*"
 pandas = "*"
 scikit-learn = "*"
 flask = "*"
-waitress = "*"
+gunicorn = "*"
+requests = "*"
 
 [dev-packages]
 
