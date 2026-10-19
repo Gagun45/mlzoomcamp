@@ -1,7 +1,8 @@
 import requests
 from flask import jsonify
 
-url = 'http://localhost:3000/predict'
+host = 'churn-serving-env.eba-tiiv8kaq.eu-central-1.elasticbeanstalk.com'
+url = f'http://{host}/predict'
 
 customer = {
   "gender": "female",
@@ -20,9 +21,9 @@ customer = {
   "contract": "month-to-month",
   "paperlessbilling": "yes",
   "paymentmethod": "electronic_check",
-  "tenure": 1,
+  "tenure": 12,
   "monthlycharges": 29.85,
-  "totalcharges": 29.85
+  "totalcharges": 12*29.85
 }
 
 response = requests.post(url, json=customer)
